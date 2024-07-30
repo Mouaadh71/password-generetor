@@ -1,14 +1,28 @@
 import random
+
 upper = "ABCDEFGHIGKLMNOPQRSTUVWXYZ"
 lower= upper.lower()
 num = "1234567890"
 sym = "!@#$%^&*()_+[]-=|"
 
 the_password_is_for = input("the password is for : ")
+
+up = int( input("do you want uppercase letter in your in your password length 1 if you want 0 if not : ") )
+low = int( input("do you want lowercase in your password length 1 if you want 0 if not : ") )
+numb = int( input("do you want numbers in your password length 1 if you want 0 if not : ") )
+symb = int( input("do you want symbols in your password length  1 if you want 0 if not: ") )
+
 len = int( input("your password length : ") )
 
 all = ""
-all += upper + lower + num + sym
+if not 0 == up :
+     all += upper
+if not  0== low :
+     all += lower
+if not 0== numb  :
+     all += num
+if not 0== symb :
+     all += sym
 
 password = ""
 
