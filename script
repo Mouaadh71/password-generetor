@@ -1,0 +1,22 @@
+import random
+upper = "ABCDEFGHIGKLMNOPQRSTUVWXYZ"
+lower= upper.lower()
+num = "1234567890"
+sym = "!@#$%^&*()_+[]-=|"
+
+the_password_is_for = input("the password is for : ")
+len = int( input("your password length : ") )
+
+all = ""
+all += upper + lower + num + sym
+
+password = ""
+
+length = len
+for i in range(length) :
+     password  += "".join(random.choice(all))
+print(password)
+two =  the_password_is_for+ ":" + password + "\n"
+with open("password","a") as p :
+     p.seek(0)
+     p .write(two)
